@@ -1,0 +1,7 @@
+/* Footer.css */
+.footer {
+    background-color: black; /* Color de fondo negro */
+    color: white; /* Color del texto blanco */
+    text-align: center; /* Centra el texto */
+    padding: 20px; /* Espaciado interno */
+}
