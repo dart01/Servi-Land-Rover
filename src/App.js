@@ -3,6 +3,8 @@ import React from 'react';
 import Header from './Header';
 import MainContent from './MainContent';
 import AboutSection from './AboutSection';
+import ServicesPlus from './ServicesPlus';
+import Gallery from './Gallery';
 import FloatingWhatsApp from './FloatingWhatsApp';
 import Footer from './Footer';
 import  styled from 'styled-components';
@@ -20,7 +22,8 @@ const App = () => {
             <Header />
             <MainContent />
             <AboutSection />
-
+            <ServicesPlus/>
+            <Gallery/>
             <FloatingWhatsApp/>
             <Footer />
         </ResponsiveDiv>

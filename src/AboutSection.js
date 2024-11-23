@@ -9,7 +9,6 @@ const AboutSectionContainer = styled.div`
     align-items: center; /* Centrar verticalmente */
     padding: 40px; /* Espaciado interno */
     height: 400px; /* Ajusta la altura según tus necesidades */
-    
     background-size: cover; /* Asegúrate de que la imagen de fondo cubra el área */
     color: white; /* Color del texto */
     @media (max-width: 768px) {
@@ -45,13 +44,14 @@ const AboutSection = () => {
         <AboutSectionContainer>
             <TextContainer>
                 <h2>Sobre Nosotros</h2>
-                <p>En nuestro taller automotriz, nos especializamos en:</p>
+                <p>En Servi Land Rover, nos especializamos en:</p>
                 <ul>
                     <li>Mecánica general</li>
-                    <li>Motor</li>
+                    <li>Reparacion y manteniento de Motor</li>
                     <li>Suspensiones deportivas</li>
                     <li>Cajas de velocidades</li>
-                    <li>Dirección electroasistida</li>
+                    <li>cajas de Dirección electroasistida</li>
+                    <li>Restauraciones totales y parciales de vehiculos</li>
                 </ul>
             </TextContainer>
             <ImageContainer>
