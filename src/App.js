@@ -11,8 +11,10 @@ import  styled from 'styled-components';
 
  
 const ResponsiveDiv = styled.div `
+    flex-direction: column; /* Cambia a columna para los elementos internos */
     @media (max-width: 750px){
-        background-color:  blue;
+        flex-direction: column;
+        
     }
 `;
 

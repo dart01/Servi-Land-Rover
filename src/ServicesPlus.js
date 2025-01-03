@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import fondo1 from './imagenes/evoqe.jpeg';
 
 const ServicesPlusContainer = styled.div`
+    display: flex; /* Contenedor principal en horizontal */
     background-image: url(${(props) => props.bgImage}); /* Establece la imagen de fondo */
     background-size: cover; /* Hace que la imagen cubra toda la pantalla */
     background-position: center; /* Centra la imagen */
@@ -13,6 +14,10 @@ const ServicesPlusContainer = styled.div`
     color: white; /* Color del texto */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para el texto */
     position: relative; 
+    @media (max-width: 750px){
+        flex-direction: column;
+        
+    }
 `;
 
 const ServicesPlus = () => {

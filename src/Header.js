@@ -22,6 +22,7 @@ const HeaderContainer = styled.header`
     &.sticky {
         background-color: #55555585; /* Cambiar color de fondo cuando es sticky */
     }
+    
 `;
 
 const Logo = styled.div`

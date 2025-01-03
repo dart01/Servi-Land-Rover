@@ -10,13 +10,28 @@ const MainContentContainer = styled.div`
     background-image: url(${(props) => props.bgImage}); /* Establece la imagen de fondo */
     background-size: cover; /* Hace que la imagen cubra toda la pantalla */
     background-position: center; /* Centra la imagen */
-    height: 130vh; /* Altura de 130% de la ventana del navegador */
+    height: 100vh; /* Altura de 100% de la ventana del navegador */
     display: flex; /* Usar flexbox para centrar el contenido */
     justify-content: center; /* Centrar horizontalmente */
     align-items: center; /* Centrar verticalmente */
     color: white; /* Color del texto */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para el texto */
     position: relative; 
+    
+    @media (max-width: 1024px) {
+        height: 100vh; /* Mantén una altura consistente */
+        width: 100vh; 
+        background-size: cover; /* Asegúrate de que el fondo se ajuste */
+        padding: 15px; /* Reduce el padding */
+    }
+
+    @media (max-width: 750px) {
+        flex-direction: column; /* Alinea los elementos verticalmente */
+        
+        height: 100vh; /* Mantén el fondo a la altura completa de la pantalla */
+        width: 100vh; 
+        
+    }
 `;
 
 const IconsContainer = styled.div`
@@ -25,12 +40,23 @@ const IconsContainer = styled.div`
     display: flex; /* Usa flexbox para alinear los íconos */
     justify-content: center; /* Centra horizontalmente */
     gap: 20px; /* Espacio entre los íconos */
+
+    @media (max-width: 750px) {
+         
+       
+        margin-top: 20px; /* Agrega espacio entre el contenido y los íconos */
+    }
 `;
 
 const Icon = styled.img`
     width: 40px; /* Ajusta el tamaño del ícono */
     height: 40px; /* Ajusta el tamaño del ícono */
     cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    
+    @media (max-width: 750px) {
+        width: 30px; /* Reduce el tamaño de los íconos en pantallas pequeñas */
+        height: 30px;
+    }
 `;
 
 const MainContent = () => {
