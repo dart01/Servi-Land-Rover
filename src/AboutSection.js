@@ -30,10 +30,19 @@ const AboutSectionContainer = styled.div`
 `;
 
 const ItemContainer = styled.div`
+    transition: transform 0.3s; /* Smooth transition for hover effects */
+    &:hover {
+        transform: scale(1.05); /* Scale up on hover */
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Shadow effect on hover */
+    }
+    &:hover {
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Shadow effect on hover */
+    }
     flex-direction: column; /* Apilar elementos verticalmente */
     justify-content: space-between; /* Centrar elementos verticalmente */
     flex-wrap: wrap;
-    width: 25%; /* Ancho relativo del contenedor */
+    width: 100%; /* Ancho completo en pantallas pequeñas */
+    max-width: 300px; /* Limitar el ancho máximo en pantallas grandes */
     padding: 2%; /* Espaciado interno */
 
 `;

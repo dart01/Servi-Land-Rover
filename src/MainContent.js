@@ -20,9 +20,9 @@ const MainContentContainer = styled.div`
     position: relative; 
     
     @media (max-width: 1024px) {
-        height: 100vh;
-        width: 100vh;
-        background-size: cover;
+        height: 80vh; /* Adjust height for smaller screens */
+        width: 100%; /* Full width */
+        background-size: cover; /* Ensure the background covers the area without repeating */
         padding: 15px;
     }
 
