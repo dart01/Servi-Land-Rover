@@ -4,69 +4,98 @@ import styled from 'styled-components';
 import imagenMapa from './imagenes/mapa.PNG';
 
 const FooterContainer = styled.div`
-    display: flex; /* Contenedor principal en horizontal */
-    background-color: black; /* Color de fondo negro */
-    color: white; /* Color del texto blanco */
-    padding: 20px; /* Espaciado interno */
-    flex-direction: column; /* Cambia a columna para los elementos internos */
-
-    
+    background-color: black;
+    color: white;
+    padding: 20px 10px;
 `;
 
 const ContentRow = styled.div`
-    display: flex; /* Contenedor para el mapa y la información de contacto en horizontal */
-    flex: 1; /* Ocupa todo el espacio disponible */
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+    display: flex;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 
     @media (max-width: 750px) {
-        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+        flex-direction: column;
+        align-items: stretch;
     }
 `;
 
 const MapContainer = styled.div`
-    flex: 1; 
-    height: 10%; /* Altura del mapa */
-    margin-right: 10%; /* Margen derecho para separación */
-    cursor: pointer; /* Cambia el cursor a mano al pasar por encima */
-    
-    @media (max-width: 750px) {
-        margin-right: 0; /* Elimina el margen en pantallas pequeñas */
-        height: 10%; /* Ajusta la altura del mapa en pantallas pequeñas */
-    }
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    cursor: pointer;
 
     img {
-        width: 90%; /* Ocupa todo el ancho disponible */
-        height: 90%; /* Ocupa toda la altura disponible */
-        object-fit: cover; /* Asegura que la imagen se ajuste al contenedor sin deformarse */
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        aspect-ratio: 16/9;
+    }
+
+    @media (max-width: 750px) {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+        flex: none;
     }
 `;
 
 const ContactInfoContainer = styled.div`
-    flex: 1; /* La información de contacto ocupa el 50% del espacio disponible */
+    flex: 1;
     display: flex;
-    flex-direction: column; /* Coloca los elementos en columna */
-    justify-content: center; /* Centra verticalmente los elementos */
-    line-height: 1.2; /* Ajusta el interlineado */
-    align-items: center; /* Centra horizontalmente los elementos */
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 20px;
+
+    h3 {
+        margin-bottom: 15px;
+        font-size: 1.5rem;
+    }
+
+    p {
+        margin: 8px 0;
+        font-size: 1rem;
+    }
 
     @media (max-width: 750px) {
-        align-items: flex-start; /* Alinear a la izquierda en pantallas pequeñas */
+        width: 100%;
+        flex: none;
+        padding: 0;
+        text-align: center;
+        align-items: center;
+
+        h3 {
+            font-size: 1.3rem;
+        }
+        
+        p {
+            font-size: 0.9rem;
+        }
     }
 `;
 
-const Line = styled.div`
-    border-top: 1px solid white; /* Línea blanca en la parte superior */
-    margin: 20px 0; /* Espaciado superior e inferior */
+const Line = styled.hr`
+    border: 0.5px solid white;
+    margin: 25px auto;
+    width: 90%;
+    max-width: 1200px;
+
+    @media (max-width: 750px) {
+        margin: 20px auto;
+    }
 `;
 
 const DesignerText = styled.div`
-    text-align: right; /* Alinear a la derecha */
-    font-size: 12px; /* Tamaño de fuente más pequeño */
-    color: white; /* Color del texto */
+    text-align: center;
+    font-size: 0.8rem;
+    color: #cccccc;
+    padding: 10px 0;
 `;
 
 const Footer = () => {
-    const mapLink = "https://www.google.com/maps/place/Taller+Servi+Land+Rover/@4.7062721,-74.1037357,18z/data=!4m6!3m5!1s0x8e3f9b4ae3d88941:0x97f388eec8208507!8m2!3d4.7065739!4d-74.1031536!16s%2Fg%2F11b7qf36g8?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D"; // Reemplaza con tu enlace de Google Maps
+    const mapLink = "https://www.google.com/maps/place/Taller+Servi+Land+Rover/@4.7062721,-74.1037357,18z/data=!4m6!3m5!1s0x8e3f9b4ae3d88941:0x97f388eec8208507!8m2!3d4.7065739!4d-74.1031536!16s%2Fg%2F11b7qf36g8?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D";
 
     return (
         <FooterContainer>
@@ -74,16 +103,19 @@ const Footer = () => {
                 <MapContainer onClick={() => window.open(mapLink, '_blank')}>
                     <img src={imagenMapa} alt="Mapa de ubicación" />
                 </MapContainer>
+                
                 <ContactInfoContainer>
                     <h3>Información de Contacto</h3>
-                    <p>Teléfono: (318) 740-7550</p> {/* Reemplaza con tu número */}
-                    <p>Email: servilandrover@gmail.com</p> {/* Reemplaza con tu correo */}
-                    <p>Dirección: Calle 82#90-75, Bogotá, Colombia</p> {/* Reemplaza con tu dirección */}
+                    <p>Teléfono: (318) 740-7550</p>
+                    <p>Email: servilandrover@gmail.com</p>
+                    <p>Dirección: Calle 82#90-75, Bogotá, Colombia</p>
                     <p>Horario: 8am a 6pm</p>
                 </ContactInfoContainer>
             </ContentRow>
-            <Line /> {/* Línea en la parte inferior */}
-            <DesignerText>Diseñado por Diego Rañó</DesignerText> {/* Texto a la derecha */}
+            
+            <Line />
+            
+            <DesignerText>Diseñado por Diego Rañó</DesignerText>
         </FooterContainer>
     );
 };

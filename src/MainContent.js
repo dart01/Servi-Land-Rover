@@ -48,7 +48,12 @@ const Icon = styled.img`
     width: 40px;
     height: 40px;
     cursor: pointer;
+    transition: transform 0.2s; /* Transición suave para el efecto hover */
     
+    &:hover {
+        transform: scale(1.1); /* Aumentar el tamaño del ícono al pasar el mouse */
+    }
+        
     @media (max-width: 750px) {
         width: 30px;
         height: 30px;

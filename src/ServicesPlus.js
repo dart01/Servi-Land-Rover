@@ -16,6 +16,7 @@ const ServicesPlusContainer = styled.div`
     padding: 20px;
     position: relative; 
     @media (max-width: 750px){
+        background-size: cover;
         flex-direction: column;
     }
 `;
@@ -44,20 +45,6 @@ const Button = styled.button`
         color: black;
        
     }
-`;
-
-const IconsContainer = styled.div`
-    position: absolute;
-    bottom: 20px;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-`;
-
-const Icon = styled.img`
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
 `;
 
 const ServicesPlus = () => {
