@@ -8,10 +8,12 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import image1 from './imagenes/santanaFrente.jpg';
 import image2 from './imagenes/puma.jpg';
 import image3 from './imagenes/sport.jpeg';
-import image4 from './imagenes/convertible1.jpg';
+import image4 from './imagenes/santanadiscovery.jpg';
 import image5 from './imagenes/convertible2.jpg';
 import image6 from './imagenes/santanaLateral.jpg';
 import image7 from './imagenes/pumaFrente.jpg';
+import image8 from './imagenes/discovery3.jpg'
+
 
 const CarouselContainer = styled.div`
     display: flex;
@@ -45,7 +47,7 @@ const Image = styled.img`
     height: 100%;
     object-fit: contain;
     border-radius: 10px;
-    background: #f0f0f0;
+    background:rgb(39, 38, 38);
     transition: transform 0.3s ease;
     
     @media (max-width: 750px) {
@@ -82,6 +84,8 @@ const Gallery = () => {
         { src: image5, alt: 'Convertible 2', title: 'Trabajo 5' },
         { src: image6, alt: 'Santana Lateral', title: 'Trabajo 6' },
         { src: image7, alt: 'Puma de Frente', title: 'Trabajo 7' },
+        { src: image8, alt: 'discovery', title: 'Trabajo 8' },
+
     ];
 
     return (
@@ -100,7 +104,7 @@ const Gallery = () => {
                 emulateTouch={true}
                 swipeable={true}
                 centerMode={true}
-                centerSlidePercentage={90}
+                centerSlidePercentage={100}
             >
                 {images.map((image, index) => (
                     <ImageContainer key={index}>
