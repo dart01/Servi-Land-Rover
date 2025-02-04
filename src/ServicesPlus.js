@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import fondo1 from './imagenes/evoqe.jpeg';
-
+import fondo1 from './imagenes/convertibleNaranjaInsta.jpg';
 
 const ServicesPlusContainer = styled.div`
     display: flex;
     background-image: url(${(props) => props.bgImage});
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
     height: 100vh;
     align-items: flex-start;
@@ -30,7 +30,7 @@ const Button = styled.button`
     bottom:10%;
     left: 10%;
     transform: translateX(-50%);
-    background: rgba(61, 60, 60, 0.51);;
+    background: rgba(61, 60, 60, 0.51);
     
     color: black;
     padding: 10px 20px;
@@ -42,7 +42,7 @@ const Button = styled.button`
         background: rgba(61, 60, 60, 0.51);
         border: 3px solid rgba(12, 141, 247, 0.51);
         color: black;
-        height
+       
     }
 `;
 
@@ -72,9 +72,9 @@ const ServicesPlus = () => {
                 <Title>Taller de mecánica<br />automotriz especializado<br />en Range Rover</Title>
             </div>
             <Button onClick={handleScheduleClick}>Agendar Cita</Button>
-           
         </ServicesPlusContainer>
     );
 };
 
 export default ServicesPlus;
+

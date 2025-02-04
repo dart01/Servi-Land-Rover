@@ -10,9 +10,7 @@ const FooterContainer = styled.div`
     padding: 20px; /* Espaciado interno */
     flex-direction: column; /* Cambia a columna para los elementos internos */
 
-    @media (max-width: 750px) {
-        flex-direction: column;
-    }
+    
 `;
 
 const ContentRow = styled.div`
