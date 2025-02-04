@@ -28,6 +28,7 @@ const MainContentContainer = styled.div`
 
     @media (max-width: 750px) {
         flex-direction: column;
+        background-size: cover;
         width: 100vw;
     }
 `;
