@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import fondo1 from './imagenes/convertibleNaranjaInsta.jpg';
+import fondo1 from './imagenes/fondo2.jpg';
 
 const ServicesPlusContainer = styled.div`
     display: flex;
