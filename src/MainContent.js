@@ -12,34 +12,32 @@ const MainContentContainer = styled.div`
     background-size: cover;
     background-position: center;
     height: 100vh;
-    width: 100vw:
+    width: 100vw;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end; /* Alinea el contenido en la parte inferior */
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     position: relative; 
     
     @media (max-width: 1024px) {
-        height: 80vh; /* Adjust height for smaller screens */
-        width: 100%; /* Full width */
+        width: 100vw; /* Full width */
         background-size: cover; /* Ensure the background covers the area without repeating */
         padding: 15px;
     }
 
     @media (max-width: 750px) {
         flex-direction: column;
-        height: 100vh;
-        width: 100vh;
+        width: 100vw;
     }
 `;
 
 const IconsContainer = styled.div`
-    position: absolute;
-    bottom: 20px;
     display: flex;
     justify-content: center;
+    align-items: center; /* Centra los iconos verticalmente */
     gap: 20px;
+    margin-bottom: 20px; /* Añade un margen inferior para separar los iconos del borde */
 
     @media (max-width: 750px) {
         margin-top: 20px;

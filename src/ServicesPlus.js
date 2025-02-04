@@ -1,10 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import fondo1 from './imagenes/evoqe.jpeg';
-import phoneIcon from './imagenes/phone.png';
-import emailIcon from './imagenes/email.png';
-import instagramIcon from './imagenes/instagram.png';
-import mapIcon from './imagenes/map.png';
+
 
 const ServicesPlusContainer = styled.div`
     display: flex;
