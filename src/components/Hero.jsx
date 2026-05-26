@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { FaPhone, FaEnvelope, FaInstagram, FaMapMarkerAlt } from 'react-icons/fa'
-import fondo from '../imagenes/traveling.jpg'
+import fondo from '../imagenes/fondoPrincipal.png'
 
 const Section = styled.section`
   position: relative;

@@ -31,10 +31,10 @@ const Title = styled.h2`
   color: var(--color-text);
   line-height: 1.15;
   max-width: 560px;
-  margin-bottom: 64px;
+  margin-bottom: 56px;
 
   @media (max-width: 750px) {
-    margin-bottom: 40px;
+    margin-bottom: 36px;
   }
 `
 
@@ -50,33 +50,35 @@ const Grid = styled.div`
 const Card = styled.div`
   background: var(--color-bg);
   border: 1px solid var(--color-border);
-  padding: 36px 28px;
+  padding: 32px 24px;
   border-radius: var(--radius-md);
   transition: border-color var(--transition);
 
   &:hover { border-color: var(--color-accent); }
 
-  @media (max-width: 750px) { padding: 24px 20px; }
+  @media (max-width: 750px) {
+    padding: 24px 20px;
+  }
 `
 
 const IconWrap = styled.div`
-  width: 44px;
-  height: 44px;
+  width: 42px;
+  height: 42px;
   border-radius: var(--radius-md);
   background: rgba(184, 153, 106, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--color-accent);
-  font-size: 18px;
-  margin-bottom: 20px;
+  font-size: 17px;
+  margin-bottom: 18px;
 `
 
 const CardTitle = styled.h3`
   font-size: 15px;
   font-weight: 500;
   color: var(--color-text);
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 `
 
 const CardList = styled.ul`
@@ -97,7 +99,7 @@ const CardItem = styled.li`
     content: '';
     position: absolute;
     left: 0;
-    top: 9px;
+    top: 8px;
     width: 4px;
     height: 4px;
     border-radius: 50%;

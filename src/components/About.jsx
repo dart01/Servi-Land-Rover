@@ -16,6 +16,10 @@ const Grid = styled.div`
   gap: 80px;
   align-items: center;
 
+  @media (max-width: 900px) {
+    gap: 48px;
+  }
+
   @media (max-width: 750px) {
     grid-template-columns: 1fr;
     gap: 48px;
@@ -69,11 +73,15 @@ const StatCard = styled.div`
   &:nth-child(2) { border-radius: 0 var(--radius-md) 0 0; }
   &:nth-child(3) { border-radius: 0 0 0 var(--radius-md); }
   &:last-child   { border-radius: 0 0 var(--radius-md) 0; }
+
+  @media (max-width: 750px) {
+    padding: 24px 18px;
+  }
 `
 
 const StatNum = styled.p`
   font-family: var(--font-display);
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 600;
   color: var(--color-accent);
   line-height: 1;
@@ -84,6 +92,10 @@ const StatLabel = styled.p`
   font-size: 13px;
   color: var(--color-text-muted);
   line-height: 1.5;
+
+  @media (max-width: 750px) {
+    font-size: 12px;
+  }
 `
 
 const stats = [

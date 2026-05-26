@@ -6,7 +6,9 @@ const FooterEl = styled.footer`
   border-top: 1px solid var(--color-border);
   padding: 70px 40px 32px;
 
-  @media (max-width: 750px) { padding: 50px 20px 24px; }
+  @media (max-width: 750px) {
+    padding: 50px 20px 24px;
+  }
 `
 
 const Inner = styled.div`
@@ -20,7 +22,11 @@ const Grid = styled.div`
   gap: 60px;
   margin-bottom: 56px;
 
-  @media (max-width: 750px) { grid-template-columns: 1fr; gap: 40px; }
+  @media (max-width: 750px) {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    margin-bottom: 40px;
+  }
 `
 
 const MapWrap = styled.div`
@@ -29,7 +35,15 @@ const MapWrap = styled.div`
   border: 1px solid var(--color-border);
   aspect-ratio: 16 / 9;
 
-  iframe { width: 100%; height: 100%; display: block; }
+  iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  @media (max-width: 750px) {
+    aspect-ratio: 4 / 3;
+  }
 `
 
 const ContactTitle = styled.h3`
@@ -39,6 +53,11 @@ const ContactTitle = styled.h3`
   color: var(--color-text);
   line-height: 1.2;
   margin-bottom: 28px;
+
+  @media (max-width: 750px) {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
 `
 
 const ContactList = styled.ul`
@@ -57,8 +76,18 @@ const ContactItem = styled.li`
   color: var(--color-text-muted);
   line-height: 1.5;
 
-  svg { color: var(--color-accent); font-size: 15px; margin-top: 3px; flex-shrink: 0; }
-  a { color: var(--color-text-muted); transition: color var(--transition); &:hover { color: var(--color-accent); } }
+  svg {
+    color: var(--color-accent);
+    font-size: 15px;
+    margin-top: 2px;
+    flex-shrink: 0;
+  }
+
+  a {
+    color: var(--color-text-muted);
+    transition: color var(--transition);
+    &:hover { color: var(--color-accent); }
+  }
 `
 
 const SocialRow = styled.div`
@@ -78,7 +107,10 @@ const SocialBtn = styled.a`
   font-size: 15px;
   transition: color var(--transition), border-color var(--transition);
 
-  &:hover { color: var(--color-accent); border-color: var(--color-accent); }
+  &:hover {
+    color: var(--color-accent);
+    border-color: var(--color-accent);
+  }
 `
 
 const Divider = styled.hr`
@@ -93,7 +125,17 @@ const Bottom = styled.div`
   flex-wrap: wrap;
   gap: 8px;
 
-  p { font-size: 12px; color: var(--color-text-muted); }
+  p {
+    font-size: 12px;
+    color: var(--color-text-muted);
+  }
+
+  @media (max-width: 750px) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 4px;
+  }
 `
 
 const Footer = () => (
@@ -118,8 +160,8 @@ const Footer = () => (
             <ContactItem><FaClock /><span>Lunes a sábado · 8:00 am – 6:00 pm</span></ContactItem>
           </ContactList>
           <SocialRow>
-            <SocialBtn href="https://wa.me/573187407550" target="_blank" rel="noopener noreferrer"><FaWhatsapp /></SocialBtn>
-            <SocialBtn href="https://www.instagram.com/servilandrover" target="_blank" rel="noopener noreferrer"><FaInstagram /></SocialBtn>
+            <SocialBtn href="https://wa.me/573187407550" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><FaWhatsapp /></SocialBtn>
+            <SocialBtn href="https://www.instagram.com/servilandrover" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaInstagram /></SocialBtn>
           </SocialRow>
         </div>
       </Grid>

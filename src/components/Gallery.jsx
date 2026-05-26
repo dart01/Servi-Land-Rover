@@ -36,7 +36,7 @@ const Title = styled.h2`
   font-weight: 600;
   color: var(--color-text);
   line-height: 1.15;
-  margin-bottom: 48px;
+  margin-bottom: 40px;
 `
 
 const CarouselWrap = styled.div`
@@ -45,27 +45,50 @@ const CarouselWrap = styled.div`
   border: 1px solid var(--color-border);
 
   .carousel .slide { background: #0D1F16; }
+
+  .carousel .control-dots {
+    bottom: 12px;
+  }
+
   .carousel .control-dots .dot {
     background: var(--color-accent);
     box-shadow: none;
     opacity: 0.4;
     width: 6px;
     height: 6px;
+    margin: 0 4px;
   }
+
   .carousel .control-dots .dot.selected { opacity: 1; }
-  .carousel .control-arrow { background: rgba(10,10,10,0.5) !important; opacity: 1 !important; }
-  .carousel .control-arrow:hover { background: rgba(184,153,106,0.7) !important; }
+
+  .carousel .control-arrow {
+    background: rgba(10,10,10,0.5) !important;
+    opacity: 1 !important;
+    padding: 16px;
+  }
+
+  .carousel .control-arrow:hover {
+    background: rgba(184,153,106,0.6) !important;
+  }
+
+  @media (max-width: 750px) {
+    .carousel .control-arrow { display: none; }
+  }
 `
 
 const Slide = styled.div`
   position: relative;
+  width: 100%;
   aspect-ratio: 16 / 9;
-  overflow: hidden;
 
-  @media (max-width: 750px) { aspect-ratio: 4 / 3; }
+  @media (max-width: 750px) {
+    aspect-ratio: 4 / 3;
+  }
 `
 
 const SlideImage = styled.img`
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -73,16 +96,33 @@ const SlideImage = styled.img`
 
 const SlideLabel = styled.div`
   position: absolute;
-  bottom: 20px;
-  left: 20px;
-  background: rgba(10, 10, 10, 0.75);
+  bottom: 16px;
+  left: 16px;
+  background: rgba(10, 10, 10, 0.8);
   border: 1px solid var(--color-border);
   backdrop-filter: blur(6px);
-  padding: 8px 16px;
+  padding: 8px 14px;
   border-radius: var(--radius-pill);
+  text-align: left;
 
-  p { font-size: 12px; font-weight: 500; color: var(--color-text); margin: 0; }
-  span { font-size: 11px; color: var(--color-accent); }
+  p {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--color-text);
+    margin: 0;
+    line-height: 1.4;
+  }
+
+  span {
+    font-size: 11px;
+    color: var(--color-accent);
+  }
+
+  @media (max-width: 750px) {
+    bottom: 12px;
+    left: 12px;
+    padding: 6px 12px;
+  }
 `
 
 const images = [
@@ -101,7 +141,18 @@ const Gallery = () => (
     <Eyebrow>Nuestro trabajo</Eyebrow>
     <Title>Galería de proyectos</Title>
     <CarouselWrap>
-      <Carousel showArrows infiniteLoop useKeyboardArrows autoPlay interval={4500} stopOnHover showThumbs={false} showStatus={false} emulateTouch swipeable>
+      <Carousel
+        showArrows
+        infiniteLoop
+        useKeyboardArrows
+        autoPlay
+        interval={4500}
+        stopOnHover
+        showThumbs={false}
+        showStatus={false}
+        emulateTouch
+        swipeable
+      >
         {images.map((img) => (
           <Slide key={img.model + img.work}>
             <SlideImage src={img.src} alt={img.model} loading="lazy" />

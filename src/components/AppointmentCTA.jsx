@@ -7,11 +7,13 @@ const Section = styled.section`
   border-top: 1px solid var(--color-border);
   border-bottom: 1px solid var(--color-border);
 
-  @media (max-width: 750px) { padding: 60px 20px; }
+  @media (max-width: 750px) {
+    padding: 60px 20px;
+  }
 `
 
 const Inner = styled.div`
-  max-width: 700px;
+  max-width: 660px;
   margin: 0 auto;
   text-align: center;
 `
@@ -27,7 +29,7 @@ const Eyebrow = styled.p`
 
 const Title = styled.h2`
   font-family: var(--font-display);
-  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-size: clamp(1.8rem, 4vw, 3rem);
   font-weight: 600;
   color: var(--color-text);
   line-height: 1.15;
@@ -38,7 +40,11 @@ const Subtitle = styled.p`
   font-size: 15px;
   color: var(--color-text-muted);
   line-height: 1.7;
-  margin-bottom: 40px;
+  margin-bottom: 36px;
+
+  @media (max-width: 750px) {
+    font-size: 14px;
+  }
 `
 
 const CTAButton = styled.a`
@@ -49,12 +55,23 @@ const CTAButton = styled.a`
   font-weight: 500;
   background: #25D366;
   color: #fff;
-  padding: 16px 36px;
+  padding: 15px 34px;
   border-radius: var(--radius-pill);
   transition: background var(--transition), transform var(--transition);
 
   svg { font-size: 20px; }
-  &:hover { background: #1ebe59; transform: translateY(-2px); }
+
+  &:hover {
+    background: #1ebe59;
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 750px) {
+    font-size: 14px;
+    padding: 14px 28px;
+    width: 100%;
+    justify-content: center;
+  }
 `
 
 const AppointmentCTA = () => (

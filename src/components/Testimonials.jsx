@@ -30,15 +30,17 @@ const Title = styled.h2`
   font-weight: 600;
   color: var(--color-text);
   line-height: 1.15;
-  margin-bottom: 56px;
+  margin-bottom: 48px;
 
-  @media (max-width: 750px) { margin-bottom: 36px; }
+  @media (max-width: 750px) {
+    margin-bottom: 32px;
+  }
 `
 
 const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 16px;
 
   @media (max-width: 900px) { grid-template-columns: repeat(2, 1fr); }
   @media (max-width: 550px) { grid-template-columns: 1fr; }
@@ -48,26 +50,31 @@ const Card = styled.div`
   background: rgba(10, 10, 10, 0.35);
   border: 1px solid rgba(245, 242, 237, 0.1);
   border-radius: var(--radius-md);
-  padding: 32px 28px;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
 
-  @media (max-width: 750px) { padding: 24px 20px; }
+  @media (max-width: 750px) {
+    padding: 22px 18px;
+  }
 `
 
 const Stars = styled.div`
   display: flex;
   gap: 4px;
   color: var(--color-accent);
-  font-size: 13px;
-  margin-bottom: 18px;
+  font-size: 12px;
+  margin-bottom: 16px;
 `
 
 const Quote = styled.p`
   font-family: var(--font-display);
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-style: italic;
   color: var(--color-text);
   line-height: 1.65;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
+  flex: 1;
 `
 
 const AuthorName = styled.p`
@@ -80,6 +87,7 @@ const AuthorName = styled.p`
 const AuthorCar = styled.p`
   font-size: 12px;
   color: var(--color-accent);
+  letter-spacing: 0.02em;
 `
 
 const testimonials = [
